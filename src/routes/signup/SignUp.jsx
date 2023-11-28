@@ -6,27 +6,30 @@ import { BiUser } from 'react-icons/bi'
 const SignUp = () => {
 
     // Input ref={} qiymatlari
-    const [userFirstname, setFirstname] = useState()
-    const [userLastname, setLastname] = useState()
-    const [userUsername, setUsername] = useState()
-    const [userEmail, setEmail] = useState()
-    const [userPassword, setPassword] = useState()
+    // Bu yangi API => https://developers.onelogin.com/api-docs/1/users/create-user
+
+    const [username, setUsername] = useState('')
+    const [userEmail, setEmail] = useState('')
+    const [userPassword, setPassword] = useState('')
+    const [avatar, setAvatar] = useState('')
 
     async function handleSubmit(e) {
         e.preventDefault()
-        const response = await fetch("https://developers.onelogin.com/api-docs/1/users/create-user", {
+        fetch("https://api.escuelajs.co/api/v1/users/", {
             method: "POST",
-            headers: { 'Content-type': "application/json" },
-            body: JSON.stringify(
-                {
-                    firstname: userFirstname.current.value,
-                    lastname: userLastname.current.value,
-                    email: userEmail.current.value,
-                    username: userUsername.current.value,
-                }
-            )
+
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                name: username,
+                email: userEmail,
+                password: userPassword,
+                avatar: avatar
+            })
         })
-        console.log(response);
+        .then(response => response.json())
+        .then(data => console.log(data))
     }
 
     return (
@@ -36,19 +39,19 @@ const SignUp = () => {
                 <form className='signup-form' onSubmit={handleSubmit}>
                     <div className="username-card">
                         <i><BiUser /></i>
-                        <input ref={userUsername} type="text" placeholder='Username' />
+                        <input value={username} onChange={(e) => setUsername(e.target.value)} type="text" placeholder='Username' />
                     </div>
                     <div className="email-card">
                         <i><AiOutlineMail /></i>0
-                        <input ref={userEmail} type="text" placeholder='Your Email' />
+                        <input value={userEmail} onChange={(e) => setEmail(e.target.value)} type="text" placeholder='Your Email' />
                     </div>
                     <div className="password-card">
                         <i><AiOutlineLock /></i>
-                        <input ref={userPassword} type="password" placeholder='Your Password' />
+                        <input value={userPassword} onChange={(e) => setPassword(e.target.value)} type="password" placeholder='Your Password' />
                         <i><AiOutlineEye /></i>
                     </div>
                     <div className="username-card">
-                        <input ref={userUsername} type="text" placeholder='Avatar' />
+                        <input value={avatar} onChange={(e) => setAvatar(e.target.value)} type="text" placeholder='Avatar' />
                     </div>
                     <button type='submit'>Sign up</button>
                 </form>
