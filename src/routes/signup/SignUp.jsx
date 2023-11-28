@@ -16,7 +16,7 @@ const SignUp = () => {
         e.preventDefault()
         const response = await fetch("https://developers.onelogin.com/api-docs/1/users/create-user", {
             method: "POST",
-            headers:{ 'Content-type': "application/json"},
+            headers: { 'Content-type': "application/json" },
             body: JSON.stringify(
                 {
                     firstname: userFirstname.current.value,
@@ -36,24 +36,19 @@ const SignUp = () => {
                 <form className='signup-form' onSubmit={handleSubmit}>
                     <div className="username-card">
                         <i><BiUser /></i>
-                        <input ref={userFirstname} type="text" placeholder='Firstname' />
-                    </div>
-                    <div className="username-card">
-                        <i><BiUser /></i>
-                        <input ref={userLastname} type="text" placeholder='Lastname' />
-                    </div>
-                    <div className="username-card">
-                        <i><BiUser /></i>
                         <input ref={userUsername} type="text" placeholder='Username' />
                     </div>
                     <div className="email-card">
-                        <i><AiOutlineMail /></i>
+                        <i><AiOutlineMail /></i>0
                         <input ref={userEmail} type="text" placeholder='Your Email' />
                     </div>
                     <div className="password-card">
                         <i><AiOutlineLock /></i>
                         <input ref={userPassword} type="password" placeholder='Your Password' />
                         <i><AiOutlineEye /></i>
+                    </div>
+                    <div className="username-card">
+                        <input ref={userUsername} type="text" placeholder='Avatar' />
                     </div>
                     <button type='submit'>Sign up</button>
                 </form>
