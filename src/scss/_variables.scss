@@ -1,0 +1,7 @@
+@mixin f-style($f-size, $text-color, $font-weight){
+    font-size: $f-size;
+    color: $text-color;
+    font-weight: $font-weight;
+    
+    
+}
