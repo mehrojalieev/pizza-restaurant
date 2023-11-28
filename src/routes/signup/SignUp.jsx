@@ -2,9 +2,10 @@ import { useEffect, useState, useRef } from 'react'
 import './signup.scss'
 import { AiOutlineEye, AiOutlineEyeInvisible, AiOutlineMail, AiOutlineLock } from 'react-icons/ai'
 import { BiUser } from 'react-icons/bi'
+import { useNavigate } from 'react-router-dom'
 
 const SignUp = () => {
-
+const navigate = useNavigate()
     // Input ref={} qiymatlari
     // Bu yangi API => https://developers.onelogin.com/api-docs/1/users/create-user
 
@@ -29,7 +30,12 @@ const SignUp = () => {
             })
         })
         .then(response => response.json())
-        .then(data => console.log(data))
+        .then(data => {
+            if(data){
+                    setTimeout(() => {navigate("/login")}, 1700)
+            }
+            console.log(data);
+        })
     }
 
     return (
