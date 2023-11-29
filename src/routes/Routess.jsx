@@ -13,8 +13,12 @@ const Routess = () => {
         <Route path='about' element={<About />} />
         <Route path='contact' element={<Contact />} />
         <Route path='signup' element={<SignUp />} />
-        <Route path='login' element={<Login/>} />
-
+        <Route path='login' element={<Login />} />
+        <Route path='cabinet' >
+          <Route path='account' />
+          <Route path='orders' />
+          <Route path='settings' />
+        </Route>
       </Routes>
     </div>
   )
