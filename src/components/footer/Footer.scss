@@ -6,7 +6,8 @@ footer {
     justify-content: center;
     gap: 0px 100px;
     width: 100%;
-    height: 600px;
+    height: auto;
+    margin-top: 50px;
 }
 
 .footer__content {
@@ -15,7 +16,15 @@ footer {
     gap: 47px 0;
 
     .footer__logo {
+        text-decoration: none;
         @include f-style(24px, --warning-color, 600);
+        color: var(--warning-color);
+    }
+
+    p {
+        width: 350px;
+        line-height: 26px;
+        @include f-style(17px, #000, 400);
     }
 }
 
@@ -25,11 +34,41 @@ footer {
     gap: 0px 40px;
 
     i {
-        font-size: 20px;
+        font-size: 24px;
         transition: 0.2s;
 
         &:hover {
-            transform: scale(1.1);
+            cursor: pointer;
+            color: var(--warning-color);
+            transform: scale(1.2);
         }
     }
+}
+
+.footer__menu {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    li {
+        a {
+            padding-bottom: 3px;
+            transition: 0.2s;
+            text-decoration: none;
+            @include f-style(18px, #000, 500);
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    li:first-child {
+        margin-bottom: 30px;
+
+        a {
+            @include f-style(24px, #000, 600)
+        }
+    }
+
 }
