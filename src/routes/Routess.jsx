@@ -4,6 +4,10 @@ import About from '../routes/about/About'
 import Contact from '../../src/routes/contact/Contact'
 import Login from './login/Login'
 import SignUp from './signup/SignUp'
+import MyAccount from './sub-routes/my-account/MyAccount'
+import Orders from './sub-routes/orders/Orders'
+import Settings from './sub-routes/settings/Settings'
+import CabinetContainer from './cabinet-container/CabinetContainer'
 
 const Routess = () => {
   return (
@@ -14,11 +18,11 @@ const Routess = () => {
         <Route path='contact' element={<Contact />} />
         <Route path='signup' element={<SignUp />} />
         <Route path='login' element={<Login />} />
-        <Route path='cabinet' >
-          <Route path='account' />
-          <Route path='orders' />
-          <Route path='settings' />
-        </Route>
+       <Route path='cabinet' element={<CabinetContainer />} >
+             <Route path='account' element={<MyAccount />} />
+             <Route path='orders' element={<Orders />} />
+             <Route path='settings' element={<Settings />} />
+      </Route>
       </Routes>
     </div>
   )
