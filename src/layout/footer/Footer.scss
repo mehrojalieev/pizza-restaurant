@@ -1,15 +1,17 @@
 @import "../../scss/variables";
 
 footer {
+   
+    width: 100%;
+    height: auto;
+    margin-top: 80px;
+}
+.footer__content-container{
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 0px 100px;
-    width: 100%;
-    height: auto;
-    margin-top: 50px;
 }
-
 .footer__content {
     display: flex;
     flex-direction: column;
@@ -71,4 +73,18 @@ footer {
         }
     }
 
+}
+
+.footer__copyright{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 0px 80px;
+    margin-top: 100px;
+    padding-top: 70px;
+    margin-bottom: 20px;
+    border-top: 1px solid black;
+    p{
+        @include f-style(18px, #000, 500);
+    }
 }
