@@ -2,6 +2,7 @@ import './nav.scss'
 import React from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import Logo from '../../assets/Images/logofood.png'
+import Home from '../../pages/home/Home';
 
 const Nav = () => {
 
@@ -41,6 +42,7 @@ const Nav = () => {
           }
         </div>
       </nav>
+
     </>
   )
 }

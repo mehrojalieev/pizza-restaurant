@@ -1,4 +1,8 @@
 import "./Category.scss"
+import Pizza from '../../assets/Images/pizza.png'
+import Pasta from '../../assets/Images/pasta.png'
+import Shakes from '../../assets/Images/shake.png'
+import Burger from '../../assets/Images/burger.png'
 
 const Category = () => {
     return (
@@ -27,29 +31,7 @@ const Category = () => {
                     <p>25 Restaurants Foods</p>
                 </div>
             </div>
-            <div className="service__container">
-                <div className="service-card">
-                    <img src={Kamaz} alt="kamaz" />
-                    <h4>Free Shipping on First Order</h4>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    </p>
-                </div>
-                <div className="service-card">
-                    <img src={Dishes} alt="kamaz" />
-                    <h4>Variety of <br /> Dishes</h4>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    </p>
-                </div>
-                <div className="service-card">
-                    <img src={Time} alt="kamaz" />
-                    <h4>Thirty Minutes Delivery</h4>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    </p>
-                </div>
-            </div>
+            
         </div>
     )
 }
