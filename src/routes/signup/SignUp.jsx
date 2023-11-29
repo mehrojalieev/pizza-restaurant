@@ -5,6 +5,7 @@ import { BiUser } from 'react-icons/bi'
 import { FaRegEyeSlash } from "react-icons/fa6";
 import { useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify'
+import { apiInstance } from '../../api';
 
 
 const SignUp = () => {
@@ -17,19 +18,12 @@ const SignUp = () => {
 
     async function handleSubmit(e) {
         e.preventDefault()
-        fetch("https://api.escuelajs.co/api/v1/users/", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-                name: username,
-                email: userEmail,
-                password: userPassword,
-                avatar: avatar
-            })
+        apiInstance.post('/users', {
+            name: username,
+            email: userEmail,
+            password: userPassword,
+            avatar: avatar
         })
-            .then(response => response.json())
             .then(data => {
                 if (data) {
                     toast('Wow so easy!', {
@@ -47,6 +41,7 @@ const SignUp = () => {
                 console.log(data);
             })
     }
+
 
     // SHOW PASSWORD
     const [showPasswordIcon, setShowPasswordIcon] = useState(false)
@@ -83,6 +78,6 @@ const SignUp = () => {
             </div>
         </>
     )
-}
 
+}
 export default SignUp
