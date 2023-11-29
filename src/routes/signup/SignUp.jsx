@@ -1,13 +1,11 @@
-import { useEffect, useState, useRef } from 'react'
+import { useEffect, useRef, useState, } from 'react'
 import './signup.scss'
-import { AiOutlineEye, AiOutlineEyeInvisible, AiOutlineMail, AiOutlineLock } from 'react-icons/ai'
+import { AiOutlineEye,  AiOutlineMail, AiOutlineLock } from 'react-icons/ai'
 import { BiUser } from 'react-icons/bi'
 import { useNavigate } from 'react-router-dom'
 
 const SignUp = () => {
-const navigate = useNavigate()
-    // Input ref={} qiymatlari
-    // Bu yangi API => https://developers.onelogin.com/api-docs/1/users/create-user
+    const navigate = useNavigate()
 
     const [username, setUsername] = useState('')
     const [userEmail, setEmail] = useState('')
@@ -18,7 +16,6 @@ const navigate = useNavigate()
         e.preventDefault()
         fetch("https://api.escuelajs.co/api/v1/users/", {
             method: "POST",
-
             headers: {
                 "Content-Type": "application/json"
             },
@@ -29,15 +26,23 @@ const navigate = useNavigate()
                 avatar: avatar
             })
         })
-        .then(response => response.json())
-        .then(data => {
-            if(data){
-                    setTimeout(() => {navigate("/login")}, 1700)
-            }
-            console.log(data);
-        })
+            .then(response => response.json())
+            .then(data => {
+                if (data) {
+                    setTimeout(() => { navigate("/login") }, 1700)
+                }
+                console.log(data);
+            })
     }
 
+    // SHOW PASSWORD
+
+    const [inputType, setInputType] = useState('text');
+
+    const toggleInputType = () => {
+      const newType = inputType === 'text' ? 'password' : 'text';
+      setInputType(newType);
+    };
     return (
         <>
             <div className="signup-wrapper">
@@ -48,16 +53,16 @@ const navigate = useNavigate()
                         <input value={username} onChange={(e) => setUsername(e.target.value)} type="text" placeholder='Username' />
                     </div>
                     <div className="email-card">
-                        <i><AiOutlineMail /></i>0
+                        <i><AiOutlineMail /></i>
                         <input value={userEmail} onChange={(e) => setEmail(e.target.value)} type="text" placeholder='Your Email' />
                     </div>
                     <div className="password-card">
                         <i><AiOutlineLock /></i>
-                        <input value={userPassword} onChange={(e) => setPassword(e.target.value)} type="password" placeholder='Your Password' />
-                        <i><AiOutlineEye /></i>
+                        <input  value={userPassword} onChange={(e) => setPassword(e.target.value)} type={inputType} placeholder='Your Password' />
+                        <i onClick={toggleInputType}><AiOutlineEye /></i>
                     </div>
                     <div className="username-card">
-                        <input value={avatar} onChange={(e) => setAvatar(e.target.value)} type="text" placeholder='Avatar' />
+                        <input autoComplete={true} value={avatar} onChange={(e) => setAvatar(e.target.value)} type="text" placeholder='Avatar' />
                     </div>
                     <button type='submit'>Sign up</button>
                 </form>
