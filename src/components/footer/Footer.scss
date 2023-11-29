@@ -1,0 +1,30 @@
+@import "../../scss/variables";
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0px 100px;
+    width: 100%;
+    height: auto;
+}
+.footer__content{
+    display: flex;
+    flex-direction: column;
+    gap: 47px 0;
+    .footer__logo{
+        @include f-style(24px, --warning-color, 600);
+    }
+}
+
+.social-icons{
+    display: flex;
+    align-items: center;
+    gap: 0px 40px;
+    i{
+        font-size: 20px;
+        transition: 0.2s;
+        &:hover{
+            transform: scale(1.1);
+        }
+    }
+}

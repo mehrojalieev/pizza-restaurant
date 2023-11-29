@@ -1,9 +1,11 @@
 import './nav.scss'
 import React from 'react'
-import { NavLink, useLocation } from 'react-router-dom'
+import { Link, NavLink, useLocation } from 'react-router-dom'
 import Logo from '../../assets/Images/logofood.png'
 
 const Nav = () => {
+
+  const checkToken = localStorage.getItem("user-token")
 
   const { pathname } = useLocation()
   return pathname.includes("/signup") || pathname.includes("/login") ? null : (
@@ -31,8 +33,12 @@ const Nav = () => {
           </ul>
         </div>
         <div className="nav-register">
-          <NavLink className={'register-btn'} to='signup'>Sign up</NavLink>
-          <NavLink className={'register-btn'} to='login'>Login</NavLink>
+          {
+            checkToken ? <Link>Account</Link> : <>
+              <NavLink className={'register-btn'} to='signup'>Sign up</NavLink>
+              <NavLink className={'register-btn'} to='login'>Login</NavLink>
+            </>
+          }
         </div>
       </nav>
     </>

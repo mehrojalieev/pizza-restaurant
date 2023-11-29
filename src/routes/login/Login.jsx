@@ -3,14 +3,18 @@ import { apiInstance } from '../../api'
 import './login.scss'
 import { AiOutlineEye, AiOutlineMail, AiOutlineLock } from 'react-icons/ai'
 import { FaRegEyeSlash } from "react-icons/fa6";
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
+    const navigate = useNavigate()
+
     const [loginName, setLoginName] = useState('')
     const [loginPassword, setLoginPassword] = useState('')
 
+
+    // SHOW PASSWORD
     const [showPasswordIcon, setShowPasswordIcon] = useState(false)
     const [inputType, setInputType] = useState('password')
-
     const toggleInputType = () => {
         setShowPasswordIcon(!showPasswordIcon)
         const newType = inputType === 'text' ? 'password' : 'text';
@@ -26,6 +30,7 @@ const Login = () => {
         })
             .then(response => {
                 if (response.data.access_token) {
+                    navigate("/")
                     localStorage.setItem("user-token", response.data.access_token)
                 }
                 console.log(response);
