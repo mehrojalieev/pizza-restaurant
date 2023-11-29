@@ -1,8 +1,11 @@
 import { useEffect, useRef, useState, } from 'react'
 import './signup.scss'
-import { AiOutlineEye,  AiOutlineMail, AiOutlineLock } from 'react-icons/ai'
+import { AiOutlineEye, AiOutlineMail, AiOutlineLock } from 'react-icons/ai'
 import { BiUser } from 'react-icons/bi'
+import { FaRegEyeSlash } from "react-icons/fa6";
 import { useNavigate } from 'react-router-dom'
+import { toast } from 'react-toastify'
+
 
 const SignUp = () => {
     const navigate = useNavigate()
@@ -29,19 +32,30 @@ const SignUp = () => {
             .then(response => response.json())
             .then(data => {
                 if (data) {
-                    setTimeout(() => { navigate("/login") }, 1700)
+                    toast('Wow so easy!', {
+                        position: "top",
+                        autoClose: 2500,
+                        hideProgressBar: false,
+                        closeOnClick: true,
+                        pauseOnHover: true,
+                        draggable: true,
+                        progress: undefined,
+                        theme: "light",
+                    });
+                    setTimeout(() => { navigate("/login") }, 2700)
                 }
                 console.log(data);
             })
     }
 
     // SHOW PASSWORD
-
-    const [inputType, setInputType] = useState('text');
+    const [showPasswordIcon, setShowPasswordIcon] = useState(false)
+    const [inputType, setInputType] = useState('password');
 
     const toggleInputType = () => {
-      const newType = inputType === 'text' ? 'password' : 'text';
-      setInputType(newType);
+        setShowPasswordIcon(!showPasswordIcon)
+        const newType = inputType === 'text' ? 'password' : 'text';
+        setInputType(newType);
     };
     return (
         <>
@@ -58,8 +72,8 @@ const SignUp = () => {
                     </div>
                     <div className="password-card">
                         <i><AiOutlineLock /></i>
-                        <input  value={userPassword} onChange={(e) => setPassword(e.target.value)} type={inputType} placeholder='Your Password' />
-                        <i onClick={toggleInputType}><AiOutlineEye /></i>
+                        <input value={userPassword} onChange={(e) => setPassword(e.target.value)} type={inputType} placeholder='Your Password' />
+                        <i onClick={toggleInputType}>{showPasswordIcon ? <FaRegEyeSlash /> : <AiOutlineEye />}</i>
                     </div>
                     <div className="username-card">
                         <input autoComplete={true} value={avatar} onChange={(e) => setAvatar(e.target.value)} type="text" placeholder='Avatar' />

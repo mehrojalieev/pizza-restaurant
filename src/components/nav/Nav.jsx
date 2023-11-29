@@ -1,10 +1,12 @@
 import './nav.scss'
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useLocation } from 'react-router-dom'
 import Logo from '../../assets/Images/logofood.png'
 
 const Nav = () => {
-  return (
+
+  const { pathname } = useLocation()
+  return pathname.includes("/signup") || pathname.includes("/login") ? null : (
     <>
       <nav>
         <img src={Logo} alt="Logo" />
