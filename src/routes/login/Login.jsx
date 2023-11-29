@@ -1,11 +1,21 @@
 import { useState } from 'react'
 import { apiInstance } from '../../api'
 import './login.scss'
-import { AiOutlineEye, AiOutlineEyeInvisible, AiOutlineMail, AiOutlineLock } from 'react-icons/ai'
+import { AiOutlineEye, AiOutlineMail, AiOutlineLock } from 'react-icons/ai'
+import { FaRegEyeSlash } from "react-icons/fa6";
 
 const Login = () => {
     const [loginName, setLoginName] = useState('')
     const [loginPassword, setLoginPassword] = useState('')
+
+    const [showPasswordIcon, setShowPasswordIcon] = useState(false)
+    const [inputType, setInputType] = useState('password')
+
+    const toggleInputType = () => {
+        setShowPasswordIcon(!showPasswordIcon)
+        const newType = inputType === 'text' ? 'password' : 'text';
+        setInputType(newType);
+    };
 
 
     const handleLoginUser = (e) => {
@@ -18,16 +28,24 @@ const Login = () => {
                 if (response.data.access_token) {
                     localStorage.setItem("user-token", response.data.access_token)
                 }
+                console.log(response);
             })
     }
 
     return (
         <>
             <div className="login-wrapper">
-                <h1>LOGIN</h1>
+                <h2>LOGIN</h2>
                 <form onSubmit={handleLoginUser} className='login-form'>
-                    <input value={loginName} onChange={(e) => setLoginName(e.target.value)} type="text" placeholder='Your Name' />
-                    <input value={loginPassword} onChange={(e) => setLoginPassword(e.target.value)} type="password" placeholder='Your Password' />
+                    <div className="email-card">
+                        <i><AiOutlineMail /></i>
+                        <input value={loginName} onChange={(e) => setLoginName(e.target.value)} type="text" placeholder='Email' />
+                    </div>
+                    <div className="password-card">
+                        <i><AiOutlineLock /></i>
+                        <input value={loginPassword} onChange={(e) => setLoginPassword(e.target.value)} type={inputType} placeholder=' Password' />
+                        <i onClick={toggleInputType}>{showPasswordIcon ? <FaRegEyeSlash /> : <AiOutlineEye />}</i>
+                    </div>
                     <button type='submit'>Login</button>
                 </form>
             </div>

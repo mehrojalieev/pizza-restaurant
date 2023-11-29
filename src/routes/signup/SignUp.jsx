@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, } from 'react'
+import { useState, } from 'react'
 import './signup.scss'
 import { AiOutlineEye, AiOutlineMail, AiOutlineLock } from 'react-icons/ai'
 import { BiUser } from 'react-icons/bi'
@@ -55,7 +55,7 @@ const SignUp = () => {
     return (
         <>
             <div className="signup-wrapper">
-                <h1>SIGN UP</h1>
+                <h2>SIGN UP</h2>
                 <form className='signup-form' onSubmit={handleSubmit}>
                     <div className="username-card">
                         <i><BiUser /></i>
@@ -71,7 +71,7 @@ const SignUp = () => {
                         <i onClick={toggleInputType}>{showPasswordIcon ? <FaRegEyeSlash /> : <AiOutlineEye />}</i>
                     </div>
                     <div className="username-card">
-                        <input autoComplete={true} value={avatar} onChange={(e) => setAvatar(e.target.value)} type="text" placeholder='Avatar' />
+                        <input value={avatar} onChange={(e) => setAvatar(e.target.value)} type="text" placeholder='Avatar' />
                     </div>
                     <button type='submit'>Sign up</button>
                 </form>

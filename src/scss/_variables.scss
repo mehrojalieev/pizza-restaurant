@@ -1,5 +1,7 @@
-@mixin f-style($f-size, $text-color, $font-weight){
-    font-size: $f-size;
+@mixin f-style($fSize, $text-color, $font-weight){
+    font-size: $fSize;
     color: $text-color;
     font-weight: $font-weight;
-}
+};
+
+

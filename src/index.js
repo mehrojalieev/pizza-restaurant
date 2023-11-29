@@ -1,7 +1,7 @@
 import React from 'react';
 import { Suspense, lazy } from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+import './scss/index.scss';
 import { BrowserRouter } from 'react-router-dom'
 const App = lazy(() => import("./App"))
 
