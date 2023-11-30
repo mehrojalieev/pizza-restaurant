@@ -1,14 +1,18 @@
 @import "../../../scss/variables";
 .user__info-container{
-    background-color: red;
+    width: 100%;
 }
 .user__header{
     width: 1000px;
     height: 200px;
-    background-color: gray !important;
     display: flex;
     align-items: center;
     justify-content: space-between; 
+    img{
+        width: 100px;
+        aspect-ratio: 1/1;
+        border-radius: 50%;
+    }
     button{
         @include f-style(20px, #1f1f1fcc, 500);
         border-radius: 100px;
