@@ -21,7 +21,16 @@ const MyAccount = () => {
           <img src={"https://avatars.githubusercontent.com/u/139835814?v=4"} alt="User Image" />
           <button>Upload Photo</button>
         </div>
-    </div>
+        <div className="user__about">
+          <div className="info-card">
+            <div className="username">
+              <strong>Your Name</strong>
+              <p>{getUserData.name}</p>
+            </div>
+            <button>Edit</button>
+          </div>
+        </div>
+      </div>
     </>
   )
 }

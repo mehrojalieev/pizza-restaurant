@@ -21,3 +21,23 @@
         background-color: rgba(240, 239, 250, 1);
     }
 }
+
+.user__about{
+    width: 1000px;
+    height: auto;
+    border: 1px solid gray;
+}
+.info-card{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .username{
+        strong{
+            @include f-style(18px, rgba(31, 31, 31, 0.7), 500);
+        }
+        p{
+            @include f-style(24px, #000, 500);
+            margin-top: 10px;
+        }
+    }
+}
