@@ -36,6 +36,7 @@ const SignUp = () => {
                         progress: undefined,
                         theme: "light",
                     });
+                    localStorage.setItem("user_id", data.data.id)
                     setTimeout(() => { navigate("/login") }, 2700)
                 }
                 console.log(data);

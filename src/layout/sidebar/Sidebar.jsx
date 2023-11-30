@@ -19,10 +19,9 @@ const Sidebar = () => {
 
 
     // LOGOUT USER
-
     const handleLogoutUser = () => {
         localStorage.removeItem("user-token")
-        navigate("/login")
+        setTimeout(() => { navigate("/login") }, 2400)
     }
 
     return (

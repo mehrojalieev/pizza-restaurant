@@ -1,13 +1,13 @@
-import React from 'react'
+import "./CabinetContainer.scss"
 import Sidebar from "../../layout/sidebar/Sidebar"
 import { Outlet } from 'react-router-dom'
 const CabinetContainer = () => {
   return (
     <div className='cabinet-wrapper'>
-        <Sidebar/>
-        <div className="cabinet__content-container">
-            <Outlet/>
-        </div>
+      <Sidebar />
+      <div className="cabinet__content-container">
+        <Outlet />
+      </div>
     </div>
   )
 }
