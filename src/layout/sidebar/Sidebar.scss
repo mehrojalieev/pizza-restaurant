@@ -1,5 +1,8 @@
 @import "../../scss/variables";
 .sidebar{
+    display: flex;
+    flex-direction: column;
+    align-items: self-start;
     max-width: 200px;
     height: 100vh;
     background-color: var(--warning-color);
@@ -18,6 +21,7 @@
     flex-direction: column;
     // align-items: center;
     margin-top: 70px;
+    flex: 1;
     gap: 40px ;
     li{
         a{
@@ -30,5 +34,42 @@
                 padding: 4px 10px;
             }
         }
+    }
+}
+
+.sidebar__logout-btn{
+    border: none;
+    @include f-style(20px, #fff, 500);
+    background-color: red;
+    border-radius: 5px;
+    padding: 10px 30px;
+    margin-bottom: 130px;
+    transition: .2s;
+    &:hover{
+        cursor: pointer;
+        transform: scale(1.1);
+    }
+}
+
+.logout-card{
+    position: absolute;
+    top: calc(30%);
+    left: calc(35%);
+    width: 350px;
+    height: 200px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;  
+    background-color: gray;      
+    gap: 10px;
+    p{
+        @include f-style(1.5rem, #fff, 500);
+    }
+    button{
+        border: none;
+        border-radius: 5px;
+        @include f-style(20px, #fff, 500 )
     }
 }

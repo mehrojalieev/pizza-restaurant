@@ -18,11 +18,11 @@ const Routess = () => {
         <Route path='contact' element={<Contact />} />
         <Route path='signup' element={<SignUp />} />
         <Route path='login' element={<Login />} />
-       <Route path='cabinet' element={<CabinetContainer />} >
-             <Route path='account' element={<MyAccount />} />
-             <Route path='orders' element={<Orders />} />
-             <Route path='settings' element={<Settings />} />
-      </Route>
+        <Route path='cabinet' element={<CabinetContainer />} >
+          <Route path='account' element={<MyAccount />} />
+          <Route path='orders' element={<Orders />} />
+          <Route path='settings' element={<Settings />} />
+        </Route>
       </Routes>
     </div>
   )
