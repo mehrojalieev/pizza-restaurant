@@ -1,0 +1,19 @@
+@import "../../../scss/variables";
+.user__info-container{
+    background-color: red;
+}
+.user__header{
+    width: 1000px;
+    height: 200px;
+    background-color: gray !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    button{
+        @include f-style(20px, #1f1f1fcc, 500);
+        border-radius: 100px;
+        padding: 10px 13px;
+        border: none;
+        background-color: rgba(240, 239, 250, 1);
+    }
+}

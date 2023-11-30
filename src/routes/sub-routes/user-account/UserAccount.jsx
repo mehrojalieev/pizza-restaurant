@@ -6,21 +6,23 @@ const MyAccount = () => {
 
   const [getUserData, setGetUserData] = useState({})
   const userId = localStorage.getItem("user_id")
-  console.log(getUserData);
   useEffect(() => {
     apiInstance(`/users/${userId}`)
       .then(response => {
         setGetUserData(response.data)
-        console.log(response)
+        console.log(response.data)
       })
   }, [])
 
   return (
-    <div className='user__info-container'>
-      <div className="user__title">
-        <h2>{getUserData.name}</h2>
-      </div>
+    <>
+      <div className='user__info-container'>
+        <div className="user__header">
+          <img src={getUserData.avatar} alt="User Image" />
+          <button>Upload Photo</button>
+        </div>
     </div>
+    </>
   )
 }
 
