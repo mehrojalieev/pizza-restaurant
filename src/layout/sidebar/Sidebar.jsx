@@ -1,14 +1,30 @@
 import { NavLink, useNavigate } from "react-router-dom"
 import "./Sidebar.scss"
-import { useState } from "react"
-
+import { useEffect, useState } from "react"
+import { IoClose } from "react-icons/io5";
 const Sidebar = () => {
     const navigate = useNavigate()
     const [logoutModal, setLogoutModal] = useState(false)
 
+
+    useEffect(() => {
+        if (logoutModal) {
+            document.body.style = "overflow: hidden";
+        }
+    }, [logoutModal])
+
     const directHome = () => {
         navigate("/")
     }
+
+
+    // LOGOUT USER
+
+    const handleLogoutUser = () => {
+        localStorage.removeItem("user-token")
+        navigate("/login")
+    }
+
     return (
         <div className="sidebar">
             <div className="sidebar__logo">
@@ -27,11 +43,12 @@ const Sidebar = () => {
             </ul>
             <button onClick={() => setLogoutModal(true)} className="sidebar__logout-btn">LOG OUT</button>
             {/* LOGOUT MODAL */}
-            <div style={logoutModal ? { display: "block" } : { display: "none" }} className="logout-card">
+            <div style={logoutModal ? { display: "flex" } : { display: "none" }} className="logout-card">
                 <p>Do you want to logout ?</p>
-                <button>Log Out</button>
-
+                <button onClick={() => setLogoutModal(false)} className="close__modal-icon"><IoClose /></button>
+                <button onClick={handleLogoutUser}>Log Out</button>
             </div>
+            <div style={logoutModal ? { display: "block" } : { display: "none" }} className="bgwrapper-modal"></div>
         </div>
     )
 }

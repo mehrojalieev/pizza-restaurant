@@ -52,24 +52,57 @@
 }
 
 .logout-card{
+    position: relative;
+    z-index: 4;
     position: absolute;
     top: calc(30%);
     left: calc(35%);
     width: 350px;
     height: 200px;
     border-radius: 5px;
-    display: flex;
+    display: flex ;
     flex-direction: column;
     align-items: center;
     justify-content: center;  
-    background-color: gray;      
-    gap: 10px;
+    background-color: black;      
+    gap: 20px;
     p{
         @include f-style(1.5rem, #fff, 500);
+        letter-spacing: 1px;
     }
     button{
         border: none;
+        background-color: red;
         border-radius: 5px;
-        @include f-style(20px, #fff, 500 )
+        padding: 10px 35px;
+        transition: 0.2s;
+        @include f-style(20px, #fff, 500 );
+        &:hover{
+            cursor: pointer;
+            transform: scale(1.04);
+        }
+    }
+}
+
+.bgwrapper-modal{
+    width: 100vw;
+    height: 100vh;
+    z-index: 3;
+    top: 0;
+    left: 0;
+   position: absolute; 
+   backdrop-filter: blur(10px);
+}
+
+.close__modal-icon{
+    position: absolute;
+    top: -10px;
+    right: -35px;
+    font-size: 28px !important;
+    background: transparent !important;
+    border: none;
+    transition: 0.2s;
+    &:hover{
+        cursor: pointer;
     }
 }
