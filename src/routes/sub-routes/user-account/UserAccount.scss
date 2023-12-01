@@ -19,6 +19,11 @@
         padding: 10px 13px;
         border: none;
         background-color: rgba(240, 239, 250, 1);
+        transition: 0.2s;
+        &:hover{
+            cursor: pointer;
+            transform: scale(1.03);
+        }
     }
 }
 

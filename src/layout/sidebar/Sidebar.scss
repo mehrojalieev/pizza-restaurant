@@ -2,12 +2,12 @@
 .sidebar{
     display: flex;
     flex-direction: column;
-    align-items: self-start;
+    // align-items: flex-start;
     max-width: 200px;
     height: 100vh;
     background-color: var(--warning-color);
     overflow: hidden;
-    padding-left: 20px;
+    padding: 0px 20px;
     h2{
         @include f-style(25px, #fff, 600);
         &:hover{
@@ -19,7 +19,7 @@
 .sidebar-list{
     display: flex;
     flex-direction: column;
-    // align-items: center;
+    align-items: center;
     margin-top: 70px;
     flex: 1;
     gap: 40px ;
@@ -31,7 +31,7 @@
             &:hover{
                 border: 1px solid #fff;
                 border-radius: 5px;
-                padding: 4px 10px;
+                padding: 5px 14px;
             }
         }
     }
@@ -43,7 +43,7 @@
     background-color: red;
     border-radius: 5px;
     padding: 10px 30px;
-    margin-bottom: 130px;
+    margin-bottom: 100px;
     transition: .2s;
     &:hover{
         cursor: pointer;
