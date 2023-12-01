@@ -5,6 +5,7 @@ import Hero from '../../components/hero/Hero'
 import Footer from '../../layout/footer/Footer';
 import Features from '../../components/features/Features';
 import Social from '../../components/social/Social';
+import Outles from '../../components/outles/Outles';
 
 
 const Home = () => {
@@ -13,6 +14,7 @@ const Home = () => {
       <Hero />
       <Category />
       <Features/>
+      <Outles/>
       <Social/>
       <Footer />
 
