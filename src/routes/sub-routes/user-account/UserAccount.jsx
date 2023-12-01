@@ -26,7 +26,7 @@ const MyAccount = () => {
             <div className="username">
               <strong>Your Name</strong>
               <p>{getUserData.name}</p>
-            </div>
+            </div>  
             <button>Edit</button>
           </div>
         </div>
