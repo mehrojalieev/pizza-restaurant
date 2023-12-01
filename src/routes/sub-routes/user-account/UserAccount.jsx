@@ -29,6 +29,20 @@ const MyAccount = () => {
             </div>  
             <button>Edit</button>
           </div>
+          <div className="info-card">
+            <div className="username">
+              <strong>Your Email</strong>
+              <p>{getUserData.email}</p>
+            </div>  
+            <button>Edit</button>
+          </div>
+          <div className="info-card">
+            <div className="username">
+              <strong>Role</strong>
+              <p>{getUserData.role}</p>
+            </div>  
+            <button>Edit</button>
+          </div>
         </div>
       </div>
     </>

@@ -2,13 +2,14 @@
 .outlets{
     width: 1200px;
     height: auto;
-    margin: 50px auto;
+    margin: 70px auto;
 }
 .outlets-title{
     text-align: center;
     strong{
         @include f-style(18px, --warning-color, 600);
-        color: var(--warning-color)
+        color: var(--warning-color);
+        letter-spacing: 1px
     }
     h2{
         @include f-style(55px, #000, 600);
@@ -41,10 +42,11 @@
         img{
             width: 100%;
             height: 100%;
-            transition: 0.2s;
+            transition: 0.4s;
             &:hover{
                 cursor: pointer;
-                transform: scale(1.1);
+                transform: scale(1.07);
+                opacity: 0.8;
             }
         }
     }
