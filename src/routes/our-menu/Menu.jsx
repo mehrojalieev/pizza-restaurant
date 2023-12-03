@@ -1,10 +1,15 @@
 import "./Menu.scss"
+
+// IMAGES
 import Menu1 from "../../assets/Images/menu1.png"
 import Menu2 from "../../assets/Images/menu2.png"
 import Menu3 from "../../assets/Images/menu3.png"
 import Menu4 from "../../assets/Images/menu4.png"
 import Menu5 from "../../assets/Images/menu5.png"
 import Menu6 from "../../assets/Images/menu6.png"
+
+// ICONS
+import { FaStar } from "react-icons/fa";
 const Menu = () => {
     return (
         <>
@@ -22,10 +27,117 @@ const Menu = () => {
                             <span>16$</span>
                         </div>
                         <p className="about-text">
-                        There are many things are needed t`o start the Fast Food Business.
+                            There are many things are needed to start the Fast Food Business.
                         </p>
                         <div className="menu-feed">
                             <button>+</button>
+                            <div className="menu-feed-icons">
+                                <i><FaStar /></i>
+                                <i><FaStar /></i>
+                                <i><FaStar /></i>
+                                <i><FaStar /></i>
+                                <i><FaStar /></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="menu__food-card">
+                        <img src={Menu2} alt="MENU-FOOD" />
+                        <div className="menu-title">
+                            <strong>Salads</strong>
+                            <span>12$</span>
+                        </div>
+                        <p className="about-text">
+                            There are many things are needed to start the Fast Food Business.
+                        </p>
+                        <div className="menu-feed">
+                            <button>+</button>
+                            <div className="menu-feed-icons">
+                                <i><FaStar /></i>
+                                <i><FaStar /></i>
+                                <i><FaStar /></i>
+                                <i><FaStar /></i>
+                                <i><FaStar /></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="menu__food-card">
+                        <img src={Menu3} alt="MENU-FOOD" />
+                        <div className="menu-title">
+                            <strong>Burgers</strong>
+                            <span>10$</span>
+                        </div>
+                        <p className="about-text">
+                            There are many things are needed to start the Fast Food Business.
+                        </p>
+                        <div className="menu-feed">
+                            <button>+</button>
+                            <div className="menu-feed-icons">
+                                <i><FaStar /></i>
+                                <i><FaStar /></i>
+                                <i><FaStar /></i>
+                                <i><FaStar /></i>
+                                <i><FaStar /></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="menu__food-card">
+                        <img src={Menu4} alt="MENU-FOOD" />
+                        <div className="menu-title">
+                            <strong>Delmonico Steak dish</strong>
+                            <span>14$</span>
+                        </div>
+                        <p className="about-text">
+                            There are many things are needed to start the Fast Food Business.
+                        </p>
+                        <div className="menu-feed">
+                            <button>+</button>
+                            <div className="menu-feed-icons">
+                                <i><FaStar /></i>
+                                <i><FaStar /></i>
+                                <i><FaStar /></i>
+                                <i><FaStar /></i>
+                                <i><FaStar /></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="menu__food-card">
+                        <img src={Menu5} alt="MENU-FOOD" />
+                        <div className="menu-title">
+                            <strong>Egg Masala</strong>
+                            <span>9$</span>
+                        </div>
+                        <p className="about-text">
+                            There are many things are needed to start the Fast Food Business.
+                        </p>
+                        <div className="menu-feed">
+                            <button>+</button>
+                            <div className="menu-feed-icons">
+                                <i><FaStar /></i>
+                                <i><FaStar /></i>
+                                <i><FaStar /></i>
+                                <i><FaStar /></i>
+                                <i><FaStar /></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="menu__food-card">
+                        <img src={Menu6} alt="MENU-FOOD" />
+                        <div className="menu-title">
+                            <strong>Peach Melba dish</strong>
+                            <span>15$</span>
+                        </div>
+                        <p className="about-text">
+                            There are many things are needed to start the Fast Food Business.
+                        </p>
+                        <div className="menu-feed">
+                            <button>+</button>
+                            <div className="menu-feed-icons">
+                                <i><FaStar /></i>
+                                <i><FaStar /></i>
+                                <i><FaStar /></i>
+                                <i><FaStar /></i>
+                                <i><FaStar /></i>
+                            </div>
                         </div>
                     </div>
                 </div>
