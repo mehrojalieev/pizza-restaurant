@@ -20,7 +20,7 @@ const Nav = () => {
               <NavLink className={({ isActive }) => isActive ? "active" : "pending"} to='/'>Home</NavLink>
             </li>
             <li>
-              <NavLink className={({ isActive }) => isActive ? "active" : "pending"} to='our-menu'>Our Menu</NavLink>
+              <NavLink className={({ isActive }) => isActive ? "active" : "pending"} to='menu'>Our Menu</NavLink>
             </li>
             <li>
               <NavLink to='offer'>Offer</NavLink>

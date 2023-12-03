@@ -6,21 +6,21 @@ const Features = () => {
   return (
     <div className="service__container">
                 <div className="service-card">
-                    <img src={Kamaz} alt="kamaz" />
+                    <img src={Kamaz} alt="Dastavka" />
                     <h4>Free Shipping on First Order</h4>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                     </p>
                 </div>
                 <div className="service-card">
-                    <img src={Dishes} alt="kamaz" />
+                    <img src={Dishes} alt="Dishes" />
                     <h4>Variety of <br /> Dishes</h4>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                     </p>
                 </div>
                 <div className="service-card">
-                    <img src={Time} alt="kamaz" />
+                    <img src={Time} alt="Vaqti" />
                     <h4>Thirty Minutes Delivery</h4>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod

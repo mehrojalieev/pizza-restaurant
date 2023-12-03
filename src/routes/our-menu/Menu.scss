@@ -1,0 +1,62 @@
+@import "../../scss/variables";
+
+.menu-wrapper{
+    width: 100%;
+    max-width: 1200px;
+    margin: 50px auto 0;
+}
+.menu-title{
+    text-align: center;
+    strong{
+        @include f-style(19px, #dc780b, 600);
+        letter-spacing: 1px;
+    }
+    h2{
+        @include f-style(31px, #000, 700);
+        margin-top: 17px;
+        margin-bottom: 25px;
+    }
+    p{
+        @include f-style(17px, #000, 500);
+        line-height: 24px;
+        width: 770px;
+        margin: auto;
+        text-align: center;
+        letter-spacing: 1px;
+        
+    }
+}
+
+.menu__card-container{
+    display: flex;
+}
+
+.menu__food-card{
+    width: 440px;
+    border-top-left-radius: 90px;
+    border-top-right-radius: 10px;
+    overflow: hidden;
+    box
+    img{
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        border-bottom-right-radius: 100px;
+    }
+    .menu-title{
+        display: flex;
+        justify-content: space-between;
+        padding: 0px 10px;
+        strong{
+            @include f-style(25px, #000, 700);
+        }
+        span{
+            @include f-style(25px, #000, 700);
+        }
+    }
+    .about-text{
+        @include f-style(17px, #150c01, 500);
+        line-height: 24px;
+        width: 300px;
+    }
+}
