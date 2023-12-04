@@ -3,7 +3,8 @@ import './signup.scss'
 import { AiOutlineEye, AiOutlineMail, AiOutlineLock } from 'react-icons/ai'
 import { BiUser } from 'react-icons/bi'
 import { FaRegEyeSlash } from "react-icons/fa6";
-import { useNavigate } from 'react-router-dom'
+import { LuImagePlus } from "react-icons/lu";
+import { useNavigate, Link } from 'react-router-dom'
 import { toast } from 'react-toastify'
 import { apiInstance } from '../../api';
 
@@ -54,7 +55,7 @@ const SignUp = () => {
         setInputType(newType);
     };
     return (
-        <>
+        <div>
             <div className="signup-wrapper">
                 <h2>SIGN UP</h2>
                 <form className='signup-form' onSubmit={handleSubmit}>
@@ -71,13 +72,17 @@ const SignUp = () => {
                         <input value={userPassword} onChange={(e) => setPassword(e.target.value)} type={inputType} placeholder='Your Password' />
                         <i onClick={toggleInputType}>{showPasswordIcon ? <FaRegEyeSlash /> : <AiOutlineEye />}</i>
                     </div>
-                    <div className="username-card">
+                    <div className="password-card">
+                        <i><LuImagePlus /></i>
                         <input value={avatar} onChange={(e) => setAvatar(e.target.value)} type="text" placeholder='Avatar' />
                     </div>
+                    <p className='checkin-text'>
+                        If you already have an account !  &nbsp;<Link to={"/login"}>Login</Link>
+                    </p>
                     <button type='submit'>Sign up</button>
                 </form>
             </div>
-        </>
+        </div>
     )
 
 }

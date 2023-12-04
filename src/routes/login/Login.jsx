@@ -3,7 +3,7 @@ import { apiInstance } from '../../api'
 import './login.scss'
 import { AiOutlineEye, AiOutlineMail, AiOutlineLock } from 'react-icons/ai'
 import { FaRegEyeSlash } from "react-icons/fa6";
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Login = () => {
     const navigate = useNavigate()
@@ -51,7 +51,11 @@ const Login = () => {
                         <input value={loginPassword} onChange={(e) => setLoginPassword(e.target.value)} type={inputType} placeholder=' Password' />
                         <i onClick={toggleInputType}>{showPasswordIcon ? <FaRegEyeSlash /> : <AiOutlineEye />}</i>
                     </div>
+                       <p className='checkin-text'>
+                       If you haven't account ? <Link to={"/signup"}>Sign Up</Link>
+                       </p>
                     <button type='submit'>Login</button>
+                   
                 </form>
             </div>
         </>

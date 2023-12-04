@@ -31,17 +31,19 @@
    display: grid;
    grid-template-rows: repeat(2, 1fr);
    grid-template-columns: repeat(3, 1fr);
-   gap: 10px 17px;
+   gap: 10px 25px;
    margin-top: 25px;
 }
 
 .menu__food-card{
-    width: 390px;
+    width: 380px;
     border-top-left-radius: 90px;
     border-top-right-radius: 10px;
     overflow: hidden;
-    padding-bottom: 7px;
+    padding-bottom: 10px;
     box-shadow: 0 0 3px gray;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
     img{
         width: 100%;
         height: 300px;
