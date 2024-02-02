@@ -1,9 +1,11 @@
 import "./Hero.scss"
 import Discount from '../../assets/Images/discountt.png'
+import { Container } from "../../utils/Utils"
 const Hero = () => {
     return (
         <header>
-            <div className="header-content">
+           <Container>
+           <div className="header-content">
                 <strong>Only $15.00</strong>
                 <h2>AUTHENTIC ITALIAN PIZZA</h2>
                 <div className="discount-card">
@@ -17,6 +19,7 @@ const Hero = () => {
                 </div>
                 <button>ORDER 0NLINE</button>
             </div>
+           </Container>
         </header>
     )
 }

@@ -9,8 +9,11 @@ header {
 
 .header-content {
     width: 856px;
-    height: auto;
-    margin: 140px 0 0 120px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 50px;
 }
 
 strong {
