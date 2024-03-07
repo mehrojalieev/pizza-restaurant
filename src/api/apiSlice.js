@@ -14,3 +14,6 @@ export const apiSlice = createApi({
 })
 
 export const { useGetCategoryFoodsQuery } = apiSlice
+
+
+// npx json-server -p 2000 -w data/db.json

@@ -10,7 +10,7 @@ const Nav = () => {
   const checkToken = localStorage.getItem("user-token")
 
   const { pathname } = useLocation()
-  return pathname.includes("/signup") || pathname.includes("/login") || pathname.includes("/cabinet") ? null : (
+  return  (
     <nav>
       <Container>
         <div className="nav-wrapper">
@@ -35,11 +35,13 @@ const Nav = () => {
               </li>
             </ul>
           </div>
+          <div className="nav-actions">
+            <Link>Cart</Link>
+          </div>
           <div className="nav-register">
             {
               checkToken ? <Link to="/cabinet">Account</Link> : <>
-                <NavLink className={'register-btn'} to='signup'>Sign up</NavLink>
-                <NavLink className={'register-btn'} to='login'>Login</NavLink>
+                <NavLink className={'register-btn'} to='signup'>Get Started</NavLink>
               </>
             }
           </div>
