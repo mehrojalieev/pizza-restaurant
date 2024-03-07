@@ -2,10 +2,12 @@ import "./Outles.scss"
 import { FaLocationDot } from "react-icons/fa6";
 import Out1 from "../../assets/Images/out1.png"
 import Out2 from "../../assets/Images/out2.png"
+import {Container} from '../../utils/Utils.jsx'
 import Out3 from "../../assets/Images/out3.png"
 const Outles = () => {
     return (
-        <div className="outlets">
+       <Container>
+         <div className="outlets">
             <div className="outlets-title">
                 <strong>OUR OUTLETS</strong>
                 <h2>Find an Outlet Near You</h2>
@@ -34,6 +36,7 @@ const Outles = () => {
                 </div>
             </div>
         </div>
+       </Container>
     )
 }
 

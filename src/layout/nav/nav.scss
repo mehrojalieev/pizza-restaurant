@@ -1,10 +1,9 @@
 nav{
-   
     width: 100%;
     height: 70px;
     background-color: #000000ba;
     backdrop-filter: blur(50px);
-    padding: 0px 70px;  
+    padding: 0px 30px;  
     position: sticky;
     top: 0;
     z-index: 4;
@@ -15,6 +14,15 @@ nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.hamburg-btn{
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    display: none;
+    cursor: pointer;
 }
 
 .nav-menu{
@@ -61,6 +69,218 @@ nav li a{
         }
         &:active{
             transform: scale(0.98);
+        }
+    }
+}
+
+
+@media only screen and (max-width: 888px){
+    .nav-menu{
+        gap: 0px 70px;
+    }
+    .nav-menu ul{
+        gap: 0px 27px;
+    }
+    nav li a{
+        font-size: 16px;
+        font-weight: 600;
+    }
+    .nav-register{
+        gap: 0px 30px;
+        a{
+            font-weight: 600;
+            letter-spacing: 1px;
+            padding: 9px 13px;
+        }
+    }
+}
+
+
+@media only screen and (max-width: 808px){
+    .nav-wrapper{
+        column-gap: 30px;
+    }
+    .nav-menu{
+        gap: 0px 90px;
+    }
+    .nav-menu ul{
+        gap: 0px 25px;
+    }
+    nav li a{
+        letter-spacing: .5px;
+        font-size: 15px;
+        font-weight: 500;
+    }
+    .nav-register{
+        gap: 0px 30px;
+        a{
+            font-size: 15px;
+            font-weight: 500;
+            letter-spacing: .5px;
+            padding: 8px 13px;
+        }
+    }
+}
+
+@media only screen and (max-width: 716px){
+    .nav-logo{
+        object-fit: contain;
+        width: 105px;
+        height: 14px;
+    }
+    .nav-menu ul{
+        gap: 0px 22px;
+    }
+    nav li a{
+        font-size: 13px;
+        font-weight: 500;
+    }
+    .nav-register{
+        gap: 0px 30px;
+        a{
+            font-size: 14px;
+            letter-spacing: .5px;
+            padding: 7px 12px;
+        }
+    }
+}
+@media only screen and (max-width: 662px){
+    nav{
+        padding: 0 5px;
+    }
+    .nav-logo{
+        margin-top: 3px;
+        width: 90px;
+        height: 15px;
+    }
+    .nav-menu ul{
+        gap: 0px 17px;
+    }
+    nav li a{
+        font-size: 12px;
+        font-weight: 400;
+    }
+    .nav-register{
+        gap: 0px 30px;
+        a{
+            font-size: 13px;
+            letter-spacing: .5px;
+            padding: 6px 11px;
+        }
+    }
+}
+
+@media only screen and (max-width: 555px){
+    nav{
+        height: 55px;
+        padding: 0 3px;
+    }
+    .nav-wrapper{
+        height: 55px;
+    }
+    .hamburg-btn{
+        display: block;
+        margin-top: 5px;
+    }
+    .nav-logo{
+        display: flex;
+        align-items: center;
+        column-gap: 15px;
+        img{
+            margin-top: 3px;
+            width: 125px;
+            height: 20px;
+        }
+    }
+    .nav-menu{
+        top: 100%;
+        height: 50px;
+        left: 0;
+        transition: 0.3s;
+        position: absolute;
+        z-index: 2;
+        width: 100% !important;
+        // display: none;
+        background-color: #252525;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+    .nav-menu ul{
+        width: 100%;
+        justify-content: space-evenly !important;
+        display: flex;
+        gap: 0px 17px;
+    }
+    nav li a{
+        font-size: 17px;
+        font-weight: 500;
+    }
+    .nav-register{
+        gap: 0px 30px;
+        a{
+            font-size: 13px;
+            letter-spacing: .5px;
+            padding: 6px 11px;
+        }
+    }
+}
+
+@media only screen and (max-width: 422px){
+    nav{
+        height: 50px;
+    }
+    .nav-wrapper{
+        height: 50px;
+    }
+    .nav-logo{
+        img{
+            width: 110px;
+            height: 17px;
+        }
+    }
+    .nav-menu{
+        height: 45px;
+    }
+    .nav-menu ul{
+        gap: 0px 5px;
+    }
+    nav li a{
+        font-size: 14px;
+        font-weight: 400;
+    }
+    .nav-register{
+        a{
+            font-size: 12px;
+            padding: 7px 10px;
+        }
+    }
+}
+
+@media only screen and (max-width: 335px){
+    nav{
+        height: 47px;
+    }
+    .nav-wrapper{
+        height: 47px;
+    }
+    .nav-logo{
+        img{
+            width: 100px;
+            height: 17px;
+        }
+    }
+    .nav-menu{
+        height: 45px;
+    }
+    .nav-menu ul{
+        gap: 0px 2px;
+    }
+    nav li a{
+        font-size: 13px;
+    }
+    .nav-register{
+        a{
+            font-size: 12px;
+            padding: 7px 10px;
         }
     }
 }

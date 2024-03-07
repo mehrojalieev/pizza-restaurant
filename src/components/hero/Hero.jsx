@@ -9,7 +9,7 @@ const Hero = () => {
                 <strong>Only $15.00</strong>
                 <h2>AUTHENTIC ITALIAN PIZZA</h2>
                 <div className="discount-card">
-                    <img src={Discount} alt="Chegirma" />
+                    <img src={Discount} alt="Chegirma" className="discount-image" />
                     <p>
                         On your first
                         order, if you order
@@ -17,7 +17,7 @@ const Hero = () => {
                         our App!
                     </p>
                 </div>
-                <button>ORDER 0NLINE</button>
+                <button className="order-btn">Order Online</button>
             </div>
            </Container>
         </header>
