@@ -15,20 +15,226 @@
     justify-content: center;
     text-align: center;
     gap: 30px 0px;
-    width: 380px;
+    max-width: 380px;
     height: 400px;
+   
+    h4{
+        font-size: 20px;
+        width: 220px;
+        font-weight: 700;
+        color: #fff;
+        line-height: 34px;
+    }
+    p{
+        font-size: 17px;
+        color: #fff;
+        line-height: 24px;
+        letter-spacing: 0.7px;
+    }
 }
-.service-card > h4{
-    font-size: 20px;
-    width: 220px;
-    font-weight: 700;
-    color: #fff;
-    line-height: 34px;
-}
-.service-card > p{
-    font-size: 17px;
-    color: #fff;
-    line-height: 24px;
-    letter-spacing: 0.7px;
 
+
+
+@media only screen and (max-width: 1060px){
+    .service-card{
+        gap: 25px 0px;
+        max-width: 380px;
+        height: 400px;
+        img{
+            width:100px;
+            aspect-ratio: 1/1;
+        }
+        h4{
+            font-size: 20px;
+            max-width: 200px;
+            font-weight: 700;
+            color: #fff;
+            line-height: 30px;
+        }
+        p{
+            font-size: 16px;
+            line-height: 22px;
+        }
+    }
+    
+}
+
+@media only screen and (max-width: 902px){
+    .service-card{
+        gap: 20px 0px;
+        max-width: 380px;
+        height: 400px;
+        img{
+            width:90px;
+            aspect-ratio: 1/1;
+        }
+        h4{
+            font-size: 20px;
+            max-width: 200px;
+            font-weight: 600;
+            line-height: 28px;
+        }
+        p{
+            font-size: 15px;
+            line-height: 20px;
+        }
+    }
+    
+}
+
+@media only screen and (max-width: 802px){
+    .service__container{
+        height: 360px;
+    }
+    .service-card{
+        gap: 17px 0px;
+        max-width: 320px;
+        height: 400px;
+        img{
+            width:80px;
+            aspect-ratio: 1/1;
+        }
+        h4{
+            font-size: 18px;
+            max-width: 180px;
+            line-height: 26px;
+        }
+        p{
+            font-size: 14px;
+            line-height: 20px;
+        }
+    }
+    
+}
+
+
+@media only screen and (max-width: 672px){
+    .service__container{
+        height: 340px;
+    }
+    .service-card{
+        gap: 13px 0px;
+        max-width: 320px;
+        height: 400px;
+        img{
+            width:70px;
+            aspect-ratio: 1/1;
+        }
+        h4{
+            font-size: 17px;
+            max-width: 120px;
+            line-height: 24px;
+        }
+        p{
+            max-width: 190px;
+            font-size: 13px;
+            line-height: 20px;
+        }
+    }
+    
+}
+
+@media only screen and (max-width: 588px){
+    .service__container{
+        height: 300px;
+    }
+    .service-card{
+        gap: 13px 0px;
+        max-width: 320px;
+        height: 400px;
+        img{
+            width:67px;
+            aspect-ratio: 1/1;
+        }
+        h4{
+            font-size: 16px;
+            max-width: 120px;
+            line-height: 24px;
+        }
+        p{
+            max-width: 170px;
+            font-size: 12px;
+            line-height: 18px;
+        }
+    }
+    
+}
+
+@media only screen and (max-width: 500px){
+    .service__container{
+        height: 280px;
+    }
+    .service-card{
+        gap: 13px 0px;
+        max-width: 320px;
+        height: 400px;
+        img{
+            width:55px;
+            aspect-ratio: 1/1;
+        }
+        h4{
+            font-size: 15px;
+            max-width: 120px;
+            line-height: 18px;
+        }
+        p{
+            max-width: 170px;
+            font-size: 10px;
+            line-height: 14px;
+        }
+    }
+    
+}
+
+@media only screen and (max-width: 420px){
+    .service__container{
+        height: 260px;
+    }
+    .service-card{
+        gap: 12px 0px;
+        max-width: 220px;
+        height: 400px;
+        img{
+            width:50px;
+            aspect-ratio: 1/1;
+        }
+        h4{
+            font-size: 13px;
+            max-width: 100px;
+            line-height: 16px;
+        }
+        p{
+            max-width: 170px;
+            font-size: 8px;
+            line-height: 12px;
+        }
+    }
+    
+}
+
+@media only screen and (max-width: 362px){
+    .service__container{
+        margin-top: 20px;
+        height: 200px;
+    }
+    .service-card{
+        gap: 8px 0px;
+        max-width: 220px;
+        height: 400px;
+        img{
+            width:40px;
+            aspect-ratio: 1/1;
+        }
+        h4{
+            font-size: 13px;
+            max-width: 90px;
+            line-height: 16px;
+        }
+        p{
+            max-width: 170px;
+            font-size: 8px;
+            line-height: 10px;
+        }
+    }
+    
 }
