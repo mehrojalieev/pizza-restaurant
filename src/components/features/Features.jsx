@@ -14,7 +14,7 @@ const Features = () => {
                 </div>
                 <div className="service-card">
                     <img src={Dishes} alt="Dishes" />
-                    <h4>Variety of <br /> Dishes</h4>
+                    <h4>Variety of Dishes</h4>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                     </p>
