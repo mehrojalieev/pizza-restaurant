@@ -6,16 +6,16 @@
     justify-content: center;
     gap: 30px;
     width: 100%;
-    height: 735px;
+    padding: 0 1rem;
+    height: 605px;
     margin-top: 65px;
     background-color: var(--warning-color);
-    // background: linear-gradient(rgba(255, 204, 0, 1), rgba(255, 204, 0, 0));
 }
 
 .social-content{
-    width: 580px;
+    max-width: 580px;
     height: auto;
-    display: flex;
+    display: flex;      
     flex-direction: column;
     h2{
         @include f-style(55px, #fff, 700);
@@ -31,11 +31,196 @@
     gap: 12px;
 }
 
-.social-image{
-    width: 585px;
-    height: 534px;
-    img{
-        width: 100%;
-        height: 100%;
+
+
+
+@media only screen and (max-width: 904px){
+    .social{
+        height: 480px;
     }
+    .social-content{
+        h2{
+            @include f-style(48px, #fff, 700);
+        }
+        p{
+            @include f-style(22px, #fff, 600);
+             margin: 20px 0 60px;
+             line-height: 30px;
+    
+        }
+    }
+}
+
+
+@media only screen and (max-width: 832px){
+    .social{
+        height: 420px;
+    }
+    .social-content{
+        h2{
+            @include f-style(43px, #fff, 700);
+        }
+        p{
+            @include f-style(20px, #fff, 600);
+             margin: 20px 0 60px;
+             line-height: 30px;
+    
+        }
+    }
+    .social-image{
+        max-width: 385px;
+        height: 424px;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+}
+
+@media only screen and (max-width: 756px){
+    .social{
+        height: 400px;
+    }
+    .social-content{
+        h2{
+            @include f-style(40px, #fff, 700);
+        }
+        p{
+            @include f-style(18px, #fff, 600);
+             margin: 20px 0 50px;
+             line-height: 28px;
+    
+        }
+    }
+    .social-image{
+        max-width: 385px;
+        height: 424px;
+    }
+    .social-links{
+        display: flex;
+        gap: 12px;
+    }
+
+    .social__link-btn{
+        width: 140px;
+    }
+    
+}
+
+
+@media only screen and (max-width: 672px){
+    .social{
+        height: 360px;
+    }
+    .social-content{
+        h2{
+            @include f-style(36px, #fff, 700);
+        }
+        p{
+            @include f-style(16px, #fff, 600);
+             margin: 14px 0 50px;
+             line-height: 24px;
+    
+        }
+    }
+    .social-image{
+        max-width: 305px;
+        height: 404px;
+    }
+    .social-links{
+        gap: 12px;
+    }
+
+    .social__link-btn{
+        width: 130px;
+    }
+    
+}
+
+@media only screen and (max-width: 560px){
+    .social{
+        height: 300px;
+    }
+    .social-content{
+        h2{
+            @include f-style(27px, #fff, 600);
+        }
+        p{
+            @include f-style(13px, #fff, 500);
+             margin: 14px 0 30px;
+             line-height: 20px;
+    
+        }
+    }
+    .social-image{
+        max-width: 305px;
+        height: 504px;
+    }
+    .social-links{
+        gap: 12px;
+    }
+
+    .social__link-btn{
+        width: 110px;
+    }
+    
+}
+
+@media only screen and (max-width: 489px){
+    .social{
+        height: 240px;
+    }
+    .social-content{
+        h2{
+            @include f-style(22px, #fff, 600);
+        }
+        p{
+            @include f-style(11px, #fff, 500);
+             margin: 14px 0 20px;
+             line-height: 18px;
+    
+        }
+    }
+    .social-image{
+        max-width: 225px;
+        height: 204px;
+    }
+    .social-links{
+        gap: 12px;
+    }
+
+    .social__link-btn{
+        width: 100px;
+    }
+    
+}
+
+@media only screen and (max-width: 413px){
+    .social{
+        height: 240px;
+    }
+    .social-content{
+        h2{
+            @include f-style(20px, #fff, 600);
+        }
+        p{
+            @include f-style(10px, #fff, 500);
+             margin: 14px 0 20px;
+             line-height: 16px;
+    
+        }
+    }
+    .social-image{
+        max-width: 225px;
+        height: 204px;
+    }
+    .social-links{
+        gap: 12px;
+    }
+
+    .social__link-btn{
+        width: 80px;
+    }
+    
 }

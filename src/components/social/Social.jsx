@@ -9,8 +9,8 @@ const Social = () => {
                 <h2>Get 20% Discount</h2>
                 <p> Get flat 20% off on your first order though The Foodmood App! </p>
                 <div className="social-links">
-                    <a href="https://play.google.com" target="_black"><img src={playmarket} alt="Play Market" /></a>
-                    <a href="https://www.apple.com" target="_blank"><img src={appstore} alt="App Store" /></a>
+                    <a href="https://play.google.com" target="_black"><img className="social__link-btn" src={playmarket} alt="Play Market" /></a>
+                    <a href="https://www.apple.com" target="_blank"><img className="social__link-btn" src={appstore} alt="App Store" /></a>
                 </div>
             </div>
             <div className="social-image">
