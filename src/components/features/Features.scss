@@ -63,7 +63,7 @@
 @media only screen and (max-width: 902px){
     .service-card{
         gap: 20px 0px;
-        max-width: 380px;
+        max-width: 300px;
         height: 400px;
         img{
             width:90px;
@@ -76,7 +76,8 @@
             line-height: 28px;
         }
         p{
-            font-size: 15px;
+            max-width: 240px;
+            font-size: 12px;
             line-height: 20px;
         }
     }
