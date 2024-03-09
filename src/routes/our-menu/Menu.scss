@@ -490,7 +490,7 @@
                 padding: 0px 5px;
                 strong, span{
                     letter-spacing: 0px;
-                    @include f-style(17px, #000, 600);
+                    @include f-style(14px, #000, 600);
                 }
             }
             .about-text{
@@ -567,6 +567,118 @@
                 }
                 i{
                     font-size: 15px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 400px){
+    .menu-title{
+        strong{
+            @include f-style(16px, #dc780b, 600);
+            letter-spacing: 1px;
+        }
+        h2{
+            @include f-style(26px, #000, 700);
+            margin: 15px 0 17px 0 !important;
+        }
+        p{
+            @include f-style(11 px, #000, 400);
+            line-height: 16px;
+            max-width: 400px;
+            
+        }
+    }
+    .menu__food-card{
+        max-width: 490px;
+        border-radius: 10px;
+        padding:  .2rem;
+        column-gap: 15px;
+        img{
+            max-width: 155px !important;
+            height: 145px;
+            border-radius: 15px;
+            box-shadow: 0 0 5px gray;
+        }
+        .card-content{
+            .menu-title{
+                padding: 0px 1px;
+                strong, span{
+                    @include f-style(16px, #000, 600);
+                }
+            }
+            .about-text{
+                @include f-style(12px, #292929, 500);
+                line-height: 18px;
+                max-width: 220px;
+                margin: 15px 0 8px 0px;
+            }
+            
+            .menu-feed{
+                margin-top: 20px;
+                padding: 0px 5px;
+                button{
+                    padding: 6px 12px;
+                    @include f-style(18px, #fff, 500);
+                }
+                i{
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 388px){
+    .menu-title{
+        strong{
+            @include f-style(15px, #dc780b, 600);
+            letter-spacing: 1px;
+        }
+        h2{
+            @include f-style(23px, #000, 700);
+            margin: 15px 0 17px 0 !important;
+        }
+        p{
+            @include f-style(10px, #000, 400);
+            line-height: 14px;
+            max-width: 400px;
+            
+        }
+    }
+    .menu__food-card{
+        max-width: 490px;
+        border-radius: 10px;
+        padding:  .2rem;
+        column-gap: 15px;
+        img{
+            max-width: 145px !important;
+            height: 135px;
+        }
+        .card-content{
+            .menu-title{
+                padding: 0px 1px;
+                strong, span{
+                    @include f-style(13px, #000, 600);
+                }
+            }
+            .about-text{
+                @include f-style(11px, #292929, 500);
+                line-height: 18px;
+                max-width: 170px;
+                margin: 10px 0 0px 0px;
+            }
+            
+            .menu-feed{
+                margin-top: 15px;
+                padding: 0px 5px;
+                button{
+                    padding: 5px 11px;
+                    @include f-style(18px, #fff, 500);
+                }
+                i{
+                    font-size: 12px;
                 }
             }
         }
