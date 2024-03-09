@@ -9,8 +9,8 @@ footer {
 .footer__content-container{
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 0px 100px;
+    justify-content: space-between;
+    padding: 0 1rem;
 }
 .footer__content {
     display: flex;
@@ -24,7 +24,7 @@ footer {
     }
 
     p {
-        width: 350px;
+        max-width: 320px;
         line-height: 26px;
         @include f-style(17px, #000, 400);
     }
@@ -86,5 +86,374 @@ footer {
     border-top: 1px solid black;
     p{
         @include f-style(18px, #000, 500);
+    }
+}
+
+@media only screen and (max-width: 998px){
+    .footer__menu {
+        gap: 12px;  
+        li {
+            a {
+                padding-bottom: 3px;
+                @include f-style(17px, #000, 500);
+            }
+        }
+    
+        li:first-child {
+            margin-bottom: 18px;
+            a {
+                @include f-style(22px, #000, 600)
+            }
+        }
+    
+    }
+}
+
+@media only screen and (max-width: 856px){
+    .footer__content {
+        gap: 30px 0;
+    
+        .footer__logo {
+            text-decoration: none;
+            @include f-style(24px, --warning-color, 600);
+            color: var(--warning-color);
+        }
+    
+        p {
+            max-width: 275px;
+            line-height: 26px;
+            @include f-style(16px, #000, 400);
+        }
+    }
+    .footer__menu {
+        gap: 12px;  
+        li {
+            a {
+                padding-bottom: 3px;
+                @include f-style(17px, #000, 500);
+            }
+        }
+    
+        li:first-child {
+            margin-bottom: 16px;
+            a {
+                @include f-style(20px, #000, 600)
+            }
+        }
+    
+    }
+}
+
+@media only screen and (max-width: 810px){
+    .footer__content {
+        gap: 20px 0;
+    
+        .footer__logo {
+            text-decoration: none;
+            @include f-style(24px, --warning-color, 600);
+            color: var(--warning-color);
+        }
+    
+        p {
+            max-width: 245px;
+            line-height: 24px;
+            @include f-style(14px, #000, 400);
+        }
+    }
+    .footer__menu {
+        gap: 12px;  
+        li {
+            a {
+                padding-bottom: 3px;
+                @include f-style(15px, #000, 500);
+            }
+        }
+    
+        li:first-child {
+            margin-bottom: 14px;
+            a {
+                @include f-style(17px, #000, 600)
+            }
+        }
+    
+    }
+}
+
+
+@media only screen and (max-width: 722px){
+    .footer__content {
+        gap: 15px 0;
+    
+        .footer__logo {
+            text-decoration: none;
+            @include f-style(22px, --warning-color, 600);
+            color: var(--warning-color);
+        }
+    
+        p {
+            max-width: 245px;
+            line-height: 22px;
+            @include f-style(13px, #000, 400);
+        }
+    }
+    .footer__menu {
+        gap: 8px;  
+        li {
+            a {
+                padding-bottom: 3px;
+                @include f-style(13px, #000, 500);
+            }
+        }
+    
+        li:first-child {
+            margin-bottom: 10px;
+            a {
+                @include f-style(16px, #000, 600)
+            }
+        }
+    
+    }
+
+    .social-icons {
+        gap: 0px 20px;
+    
+        i {
+            font-size: 22px;
+        }
+    }
+    .footer__copyright{
+        gap: 0px 60px;
+        margin-top: 50px;
+        padding-top: 40px;
+        p{
+            @include f-style(17px, #000, 500);
+        }
+    }
+}
+
+
+
+@media only screen and (max-width: 670px){
+    .footer__content-container{
+        column-gap: 20px;
+    }
+    .footer__content {
+        gap: 15px 0;
+    
+        .footer__logo {
+            @include f-style(20px, --warning-color, 600);
+            color: var(--warning-color);
+        }
+        p {
+            max-width: 215px;
+            line-height: 20px;
+            @include f-style(13px, #000, 400);
+        }
+    }
+    .footer__menu {
+        gap: 8px;  
+        li {
+            a {
+                padding-bottom: 3px;
+                @include f-style(12px, #000, 500);
+            }
+        }
+    
+        li:first-child {
+            margin-bottom: 8px;
+            a {
+                @include f-style(15px, #000, 600)
+            }
+        }
+    
+    }
+    .social-icons {
+        gap: 0px 20px;
+        i {
+            font-size: 22px;
+        }
+    }
+    .footer__copyright{
+        gap: 0px 40px;
+        margin-top: 40px;
+        padding-top: 25px;
+        p{
+            @include f-style(15px, #000, 500);
+        }
+    }
+}
+
+@media only screen and (max-width: 670px){
+    .footer__content-container{
+        column-gap: 20px;
+    }
+    .footer__content {
+        gap: 15px 0;
+    
+        .footer__logo {
+            @include f-style(20px, --warning-color, 600);
+            color: var(--warning-color);
+        }
+        p {
+            max-width: 185px;
+            line-height: 18px;
+            @include f-style(11px, #000, 400);
+        }
+    }
+    .footer__menu {
+        gap: 5px;  
+        li {
+            a {
+                padding-bottom: 3px;
+                @include f-style(11px, #000, 500);
+            }
+        }
+        li:first-child {
+            margin-bottom: 8px;
+            a {
+                @include f-style(14px, #000, 600)
+            }
+        }
+    
+    }
+    .social-icons {
+        gap: 0px 16px;
+        i {
+            font-size: 18px;
+        }
+    }
+    .footer__copyright{
+        gap: 0px 40px;
+        margin-top: 30px;
+        padding-top: 20px;
+        p{
+            @include f-style(14px, #000, 500);
+        }
+    }
+}
+
+@media only screen and (max-width: 566px){
+    .footer__content-container{
+        column-gap: 20px;
+    }
+    .footer__content {
+        display: none;
+    }
+    .footer__menu {
+        gap: 14px;  
+        li {
+            a {
+                padding-bottom: 3px;
+                @include f-style(16px, #000, 500);
+            }
+        }
+        li:first-child {
+            margin-bottom: 8px;
+            a {
+                @include f-style(18px, #000, 600)
+            }
+        }
+    
+    }
+    .footer__copyright{
+        gap: 0px 40px;
+        margin-top: 30px;
+        padding-top: 20px;
+        p{
+            @include f-style(14px, #000, 500);
+        }
+    }
+}
+
+@media only screen and (max-width: 490px){
+    .footer__content-container{
+        column-gap: 20px;
+    }
+    .footer__menu {
+        gap: 10px;  
+        li {
+            a {
+                padding-bottom: 3px;
+                @include f-style(14px, #000, 500);
+            }
+        }
+        li:first-child {
+            margin-bottom: 8px;
+            a {
+                @include f-style(16px, #000, 600)
+            }
+        }
+    
+    }
+    .footer__copyright{
+        gap: 0px 40px;
+        margin-top: 25px;
+        padding-top: 15px;
+        p{
+            @include f-style(13px, #000, 500);
+        }
+    }
+}
+
+@media only screen and (max-width: 428px){
+    .footer__content-container{
+        column-gap: 10px;
+    }
+    .footer__menu {
+        gap: 7px;  
+        li {
+            a {
+                padding-bottom: 3px;
+                @include f-style(12px, #000, 500);
+            }
+        }
+        li:first-child {
+            margin-bottom: 8px;
+            a {
+                @include f-style(14px, #000, 600)
+            }
+        }
+    
+    }
+    .footer__copyright{
+        margin-top: 25px;
+        padding-top: 10px;
+        justify-content: space-between;
+        p{
+            @include f-style(11px, #000, 500);
+        }
+    }
+}
+
+@media only screen and (max-width: 370px){
+    .footer__content-container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        // place-items: center;
+        row-gap: 30px;
+    }
+    .footer__menu {
+        gap: 10px;  
+        li {
+            a {
+                padding-bottom: 3px;
+                @include f-style(13px, #000, 500);
+            }
+        }
+        li:first-child {
+            margin-bottom: 8px;
+            a {
+                @include f-style(15px, #000, 600)
+            }
+        }
+    
+    }
+    .footer__copyright{
+        margin-top: 23px;
+        padding-top: 10px;
+        justify-content: center;
+        p{
+            @include f-style(10px, #000, 500);
+        }
     }
 }

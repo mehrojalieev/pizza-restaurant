@@ -16,7 +16,7 @@ const Home = () => {
       <Features/>
       <Outles/>
       <Social/>
-      {/* <Footer /> */}
+      <Footer />
 
     </>
   )

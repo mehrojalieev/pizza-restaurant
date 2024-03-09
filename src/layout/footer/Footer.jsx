@@ -5,7 +5,8 @@ import { Link } from "react-router-dom";
 const Footer = () => {
     return (
         <footer>
-            <div className="footer__content-container">
+           <div className="container">
+           <div className="footer__content-container">
                 <div className="footer__content">
                     <Link className="footer__logo">FOODMOOD</Link>
                     <p>Vivamus convallis fermen sollicitudin et, vitae elit in vel ultrices sed in urna ipsum ullamcorper auctor.</p>
@@ -41,6 +42,7 @@ const Footer = () => {
                 <p>Copyright © 2022 The Pizzeria</p>
                 <p>Powered by The FOODMOOD</p>
             </div>
+           </div>
         </footer>
     )
 }
