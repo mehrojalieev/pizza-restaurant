@@ -12,7 +12,7 @@ import Menu6 from "../../assets/Images/menu6.png"
 import { FaStar } from "react-icons/fa";
 const Menu = () => {
     return (
-        <>
+        <div className="container">
             <div className="menu-wrapper">
                 <div className="menu-title">
                     <strong>MENU</strong>
@@ -22,7 +22,8 @@ const Menu = () => {
                 <div className="menu__card-container">
                     <div className="menu__food-card">
                         <img src={Menu1} alt="MENU-FOOD" />
-                        <div className="menu-title">
+                       <div className="card-content">
+                       <div className="menu-title">
                             <strong>Vegie Muffen</strong>
                             <span>16$</span>
                         </div>
@@ -39,9 +40,11 @@ const Menu = () => {
                                 <i><FaStar /></i>
                             </div>
                         </div>
+                       </div>
                     </div>
                     <div className="menu__food-card">
                         <img src={Menu2} alt="MENU-FOOD" />
+                        <div className="card-content">
                         <div className="menu-title">
                             <strong>Salads</strong>
                             <span>12$</span>
@@ -59,9 +62,11 @@ const Menu = () => {
                                 <i><FaStar /></i>
                             </div>
                         </div>
+                        </div>
                     </div>
                     <div className="menu__food-card">
                         <img src={Menu3} alt="MENU-FOOD" />
+                        <div className="card-content">
                         <div className="menu-title">
                             <strong>Burgers</strong>
                             <span>10$</span>
@@ -79,9 +84,11 @@ const Menu = () => {
                                 <i><FaStar /></i>
                             </div>
                         </div>
+                        </div>
                     </div>
                     <div className="menu__food-card">
                         <img src={Menu4} alt="MENU-FOOD" />
+                        <div className="card-content">
                         <div className="menu-title">
                             <strong>Delmonico Steak dish</strong>
                             <span>14$</span>
@@ -99,9 +106,11 @@ const Menu = () => {
                                 <i><FaStar /></i>
                             </div>
                         </div>
+                        </div>
                     </div>
                     <div className="menu__food-card">
                         <img src={Menu5} alt="MENU-FOOD" />
+                        <div className="card-content">
                         <div className="menu-title">
                             <strong>Egg Masala</strong>
                             <span>9$</span>
@@ -119,9 +128,11 @@ const Menu = () => {
                                 <i><FaStar /></i>
                             </div>
                         </div>
+                        </div>
                     </div>
                     <div className="menu__food-card">
                         <img src={Menu6} alt="MENU-FOOD" />
+                        <div className="card-content">
                         <div className="menu-title">
                             <strong>Peach Melba dish</strong>
                             <span>15$</span>
@@ -139,10 +150,11 @@ const Menu = () => {
                                 <i><FaStar /></i>
                             </div>
                         </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </>
+        </div>
     )
 }
 
