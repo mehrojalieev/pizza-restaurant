@@ -15,7 +15,7 @@ const Home = () => {
       {/* <Category /> */}
       <Features/>
       <Outles/>
-      {/* <Social/> */}
+      <Social/>
       {/* <Footer /> */}
 
     </>
